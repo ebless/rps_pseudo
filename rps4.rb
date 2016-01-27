@@ -31,7 +31,15 @@ end
 puts win
 puts loses
 #Declare Winner at end with score of wins and loses
+if win > loses
+  puts "You won the best of three!"
+elsif win < loses
+  puts "You lost the best of three!"
+elsif win == loses
+  puts "You tied the computer!"
+end
 
 #### BONUS ####
   #Show history of computer and user moves at end.
+puts ''
 
