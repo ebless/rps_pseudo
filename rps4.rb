@@ -3,7 +3,7 @@ win = 0
 #set loses variable to zero
 loses = 0
 #Prompt user to chose r, p or s
-
+history = []
 #get user input, set to choice variable, make sure it's lowercase
 
 #Select computer choice randomly from arrary, set to variable computer
@@ -26,6 +26,7 @@ loses = 0
       puts "You lose!"
       loses = loses + 1
     end
+    history << [choice, computer]
 end
 
 puts win
@@ -42,4 +43,8 @@ end
 #### BONUS ####
   #Show history of computer and user moves at end.
 puts ''
+
+history.each do |i|
+  puts i[0] + ', ' + i[1]
+end
 
